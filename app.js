@@ -23,7 +23,7 @@ const { vistaTienda } = require ('./app/vistas/tienda.vista.js')
 //Levantamos nuestro servidor
 async function inicioServer() {
     try {
-        //await sequelize.authenticate();
+        await sequelize.authenticate();
         console.log('Conección estabilizada correctamente');
         app.listen(process.env.PORT, function () {
             console.log(`Sistema iniciado en http://${process.env.HOST}:${process.env.PORT}`);
